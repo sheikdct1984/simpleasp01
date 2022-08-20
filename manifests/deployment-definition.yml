@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: #Dictionary
+  name: myapp-deployment
+spec: # Dictionary
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+  template:  
+    metadata: # Dictionary
+      name: myapp-pod
+      labels: # Dictionary
+        app: myapp  # Key value paids
+    spec:
+      containers: # List
+        - name: myapp-container
+          image: sheikdct1984/simpleasp:v2
+          resources:
+          ports: 
+            - containerPort: 5063  
+    
