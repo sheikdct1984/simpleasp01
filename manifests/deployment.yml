@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: simpleasp20 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simpleasp20
+  template:
+    metadata:
+      labels:
+        app: simpleasp20 
+    spec:
+      containers:
+        - name: simpleasp20 
+          image: siaksacr.azurecr.io/simpleasp20
+          ports:
+          - containerPort: 5063
