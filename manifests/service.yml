@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: simpleasp20
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 5063 
+    selector:
+        app: simpleasp20
